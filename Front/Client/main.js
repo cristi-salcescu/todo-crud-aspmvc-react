@@ -23,7 +23,7 @@ import TodoContainer from "./components/TodoContainer.jsx";
       return Promise.all([userStore.fetch()]);
     }
 	
-    function mountPage(components){		
+    function mountPage(){		
       ReactDOM.render(
         <TodoContainer stores={stores} />,
         document.getElementById('root'));

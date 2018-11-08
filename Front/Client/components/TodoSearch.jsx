@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 export default class TodoSearch extends React.Component { 
   constructor(props){
     super(props);
@@ -38,3 +39,7 @@ export default class TodoSearch extends React.Component {
     </form>;
   }
 }
+
+TodoSearch.propTypes = {
+  onSearch: PropTypes.func
+};

@@ -5,15 +5,15 @@ body {
   
 .input {
     font-size: 16px;
-    border: 1px solid #A71D20;
+    border: 1px solid #2C83A9;
     padding: 10px;
 }
 
 .btn {
     font-size: 16px;
-    background-color: #A71D20;
+    background-color: #2C83A9;
     color: #FFF;
-    border: 1px solid #A71D20;
+    border: 1px solid #2C83A9;
     cursor : pointer;
     padding: 10px;
 }

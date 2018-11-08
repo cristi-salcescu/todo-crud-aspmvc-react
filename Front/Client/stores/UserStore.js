@@ -1,24 +1,29 @@
 export default function UserStore(dataService){
-    "use strict";
-    let users = [];
+    "use strict"; 
+    let usersMap = [];
     
     let eventEmitter = $.Callbacks();
   
     function setLocalUsers(newUsers){
-      users = newUsers;
+      usersMap = createMapFrom(newUsers);
       eventEmitter.fire();
     }
     
     function fetch() {
       return dataService.get().then(setLocalUsers);
     }
-    
-    function getById(id){
-      function byId(user){
-        return parseInt(user.id) === parseInt(id); 
-      }
 
-      return users.find(byId);
+    function getById(id){
+      return usersMap[id];
+    }
+
+    function asMapById(map, value){
+      map[value.id] = value;
+      return map;
+    }
+
+    function createMapFrom(list){
+        return list.reduce(asMapById, Object.create(null));
     }
     
     return Object.freeze({ 

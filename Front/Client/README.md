@@ -1,23 +1,19 @@
-Open the index.html.
+Open the ./dist/index.html.
 All bundles are already generated, there is no need to run any extra tasks.
 
+Execute `npm install` from command prompt to install all dependecies.
 
-# GruntJS
-The application uses GruntJS to run tasks.
+# Gulp
+The application uses Gulp to run tasks.
+Execute from command prompt `npm install -g gulp-cli` to make Gulp available.
 
-How install GruntJS:
+How to run Gulp
 - Execute from command prompt:
-`npm install -g grunt-cli`
-- Execute from command prompt:
-`npm install`
-
-How to run GruntJS
-- Execute from command prompt:
-`grunt`
+`gulp`
 - In order to start the watch, execute from command prompt:
-`grunt watch`
+`gulp watch`
 
-GruntJS is used to bundle all modules together, concatenate css files, linting.
+Gulp is used to bundle all modules together, concatenate css files, linting.
 
 # Architecture
 The application is split in 3 layers:
@@ -26,15 +22,11 @@ The application is split in 3 layers:
 - data access: the "dataacess" folder
 
 Data Access objects make ajax requests.
-Models keep and manage state.
+Stores keep and manage state.
 Components render data and manage user interation.
-The app.js builds all the necesary objects and mounts the page
 
-Components access models, which in turn access data access objects.
+The main.js builds all the necesary objects and mounts the page.
 
 # Tests
-The modules functionality is tested using QUnit.
-Open tests/tests.html to run all the tests.
-
-# Styles
-All styles are in the "css" folder.
+Jest is used for testing.
+Execute `npm test` to run the tests.

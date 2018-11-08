@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import TodoList from "./TodoList.jsx";
 import TodoSearch from "./TodoSearch.jsx";
-import { setTimeout } from "timers";
   
 export default class TodoContainer extends React.Component {
   constructor(props){
@@ -11,14 +11,11 @@ export default class TodoContainer extends React.Component {
     this.reload = this.reload.bind(this);
   }
   
-  componentWillMount(){   
+  componentWillMount(){
+    this.todoStore.onChange(this.reload);
+    this.todoStore.fetch();
     this.query = null;
     this.setState({todos : []});
-  }
-
-  componentDidMount() {
-      this.todoStore.onChange(this.reload);
-      this.todoStore.fetch();
   }
   
   reload(){
@@ -38,3 +35,7 @@ export default class TodoContainer extends React.Component {
       </div>;
   }
 }
+
+TodoContainer.propTypes = {
+  stores: PropTypes.object
+};

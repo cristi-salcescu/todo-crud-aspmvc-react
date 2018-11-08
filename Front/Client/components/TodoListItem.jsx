@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 export default function TodoListItem(props){
   "use strict";  
   return       <li>
@@ -6,3 +7,7 @@ export default function TodoListItem(props){
     <div>{ props.todo.userName }</div>
   </li>;
 }
+
+TodoListItem.propTypes = {
+  todo: PropTypes.object
+};

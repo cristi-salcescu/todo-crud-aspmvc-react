@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export default function TodoStore(dataService, userStore){
     "use strict";
     let todos = [];

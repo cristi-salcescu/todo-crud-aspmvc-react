@@ -193,10 +193,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Client\app.js" />
     <Content Include="Client\components\TodoContainer.jsx" />
+    <Content Include="Client\components\TodoList.css" />
     <Content Include="Client\components\TodoList.jsx" />
+    <Content Include="Client\components\TodoListItem.css" />
     <Content Include="Client\components\TodoListItem.jsx" />
+    <Content Include="Client\components\TodoSearch.css" />
     <Content Include="Client\components\TodoSearch.jsx" />
     <Content Include="Client\css\base.css" />
     <Content Include="Client\css\todo-list-item.css" />
@@ -204,9 +206,9 @@
     <Content Include="Client\css\todo-search.css" />
     <Content Include="Client\dataaccess\TodoDataService.js" />
     <Content Include="Client\dataaccess\UserDataService.js" />
-    <Content Include="gruntfile.js" />
-    <Content Include="Client\index.html" />
+    <Content Include="Client\main.js" />
     <Content Include="Client\stores\TodoStore.js" />
+    <Content Include="Client\stores\TodoStore.test.js" />
     <Content Include="Client\stores\UserStore.js" />
     <Content Include="Client\tests\tests.html" />
     <Content Include="Client\tests\TestTodoStore.js" />
@@ -234,6 +236,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="gulpfile.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -254,8 +257,6 @@
     <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="npm-install-grunt-cli.bat" />
-    <Content Include="npm-install.bat" />
     <Content Include="package.json" />
     <Content Include="Client\README.md" />
     <None Include="packages.config" />

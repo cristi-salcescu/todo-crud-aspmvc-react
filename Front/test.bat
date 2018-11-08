@@ -1,3 +1,3 @@
 cd client
-grunt watch
+npm test
 echo "done"
